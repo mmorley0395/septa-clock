@@ -13,3 +13,7 @@ next_three = r.get(f"{bus_num}")
 next_bus = next_three[0]
 second_bus = next_three[1]
 third_bus = next_three[2]
+
+print(next_three[0]["DateCalender"])
+print(next_three[1]["DateCalender"])
+print(next_three[2]["DateCalender"])
