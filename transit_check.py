@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime, timedelta, timezone
-
 from RPLCD.i2c import CharLCD
 
 lcd = CharLCD("PCF8574", 0x27)
@@ -20,4 +19,4 @@ datetime_object = datetime.strptime(next_bus_time, "%d/%m/%y %I:%M %p")
 arrives_in = datetime_object - now
 minutes = str(arrives_in)[:4]
 
-lcd.write_string(f"the{bus_num} comes\n\rin {arrives_in} minutes")
+lcd.write_string(f"the {bus_num} comes\n\rin {arrives_in} minutes")
